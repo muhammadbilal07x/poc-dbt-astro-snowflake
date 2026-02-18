@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_sales
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: stg_inventory
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_stock_alerts
+    columns:
+      - name: product_id
+        tests:
+          - not_null
