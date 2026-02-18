@@ -1,0 +1,15 @@
+name: "poc_dbt"
+version: "1.0.0"
+config-version: 2
+
+profile: "poc_dbt"
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  poc_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
